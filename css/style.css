@@ -148,17 +148,18 @@ body{
 
 }
 
-.about {
+.about, .menu{
     padding: 8rem 7% 1.4rem;
 }
 
-.about h2{
+.about h2, .menu h2, .contact h2{
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
+    
 }
 
-.about h2 span{
+.about h2 span, .menu h2 span, .contact h2 span{
     color:var(--primary)
 }
 
@@ -196,8 +197,98 @@ body{
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 1.6;
+    padding-left: 3rem;
 }
 
+/* Menu Section */
+.menu h2, .contact h2{
+    margin-bottom:1.6rem;
+}
+
+.menu p, .contact p{
+    text-align: center;
+    max-width: 20 rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-card{
+    text-align: center;
+    padding-bottom: 8rem;
+}
+
+.menu .row .menu-card .menu-card-title{
+    padding:1rem;
+   margin: 1.rem auto 0.5 rem;
+   font-weight: 700;
+}
+
+.menu-card-image{
+    border-radius: 60%;
+    width: 90%;
+    align-items: center;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+/* Contact */
+.contact .row{
+    display: flex;
+    margin-top: 2rem;
+    background-color: #222;
+}
+
+.contact .row .map{
+    flex: 1 1 45%;
+    /* Atur tinggi agar iframe responsif */
+    display: flex;
+    align-items: stretch;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+
+}
+
+.contact .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--bg);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-group input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    background:none;
+    color:whitesmoke
+}
+
+.contact .row form .btn{
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color:whitesmoke;
+    background-color: var(--primary);
+    cursor:pointer
+}
 
 
 /* Media Querrys */
@@ -274,6 +365,22 @@ body{
 
     .about .row .content p{
         font-size: 1.6rem;
+    }
+
+    .menu p{
+        font-size: 1.2rem;
+    }
+
+    .contact .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row .map{
+        height: 30rem;
+    }
+
+    .contact .row form{
+        padding-top: 0;
     }
 }
 
